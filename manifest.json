@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Go to Parent Tab",
+  "version": "0.1",
+  "author": "nomadic",
+  "description": "A context menu option for switching to/recreating the tab the initiated the current tab.",
+
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": ["tabs", "contextMenus", "storage"],
+
+  "commands": {
+    "go-to-parent-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Go to the Parent Tab"
+    }
+  }
+}
