@@ -12,10 +12,12 @@ This extension is for going back to the originator tab, or "parent tab", for the
 
 ## Installation
 1. Install `CRX` Packed Extension
-    * TODO...
+    * Go to the releases tab and download "`go-to-parent-tab-v[VERSION_NUMBER].crx`" from the latest release.
+    * Launch the `CRX` file with your Chromium browser.
+    * Click **Install** or **Enable** on the "Go to Parent Tab" extension shown on the extensions page.
 2. Load Unpacked Extension
     * Download the repository with the green **Clone or download** button on the top right of the page.
-    * On Vivaldi's extensions page enable **Developer mode**.
+    * On your Chromium browser's extensions page enable **Developer mode**.
     * Click **Load unpacked** and select the directory of the repository you downloaded.
 
 ---
