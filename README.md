@@ -20,6 +20,9 @@ This extension is for going back to the originator tab, or "parent tab", for the
     * On your Chromium browser's extensions page enable **Developer mode**.
     * Click **Load unpacked** and select the directory of the repository you downloaded.
 
+## Limitations
+* Tabs in reopened sessions do not have parent tabs.
+* Tabs opened in new windows do not have parent tabs.
 ---
 The original feature request can be found here:
 [https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab](https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab)
