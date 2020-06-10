@@ -6,9 +6,11 @@ A chromium based browser extension created for [@oskark](https://forum.vivaldi.n
 This extension is for going back to the originator tab, or "parent tab", for the currently active tab. If the parent tab is still open and on the original url for the page that created the current tab, then the browser should switch to the parent tab. If the parent tab is closed or has navigated to a new url, then a new tab is created with the original parent tab's url.
 
 The original feature request that was the inspiration for this extension can be found here:
+
 [https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab](https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab)
 
 The Vivaldi Mod version of this extension can be found here:
+
 [https://forum.vivaldi.net/topic/47728/context-menu-option-to-go-to-parent-tab](https://forum.vivaldi.net/topic/47728/context-menu-option-to-go-to-parent-tab)
 
 ## Features
