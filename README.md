@@ -7,10 +7,11 @@ This extension is for going back to the originator tab, or "parent tab", for the
 
 &nbsp;
 
-The original feature request that was the inspiration for this extension can be found here: &nbsp;&nbsp;[https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab](https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab)
+The original feature request that was the inspiration for this extension can be found here:
+* [https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab](https://forum.vivaldi.net/topic/45626/go-to-the-site-from-which-you-came-to-a-tab)
 
-The Vivaldi Mod version of this extension can be found here: &nbsp;&nbsp;
-[https://forum.vivaldi.net/topic/47728/context-menu-option-to-go-to-parent-tab](https://forum.vivaldi.net/topic/47728/context-menu-option-to-go-to-parent-tab)
+The Vivaldi Mod version of this extension can be found here:
+* [https://forum.vivaldi.net/topic/47728/context-menu-option-to-go-to-parent-tab](https://forum.vivaldi.net/topic/47728/context-menu-option-to-go-to-parent-tab)
 
 ## Features
 * Context Menu option for going to a tab's parent tab
