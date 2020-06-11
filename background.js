@@ -45,12 +45,27 @@ function saveParentUrl(tab) {
     chrome.tabs.get(tab.openerTabId, (parentTab) => {
       let url = parentTab.url ? parentTab.url : parentTab.pendingUrl ? parentTab.pendingUrl : "";
       storageOBJ[tabId.toString()] = url;
-      chrome.storage.local.set(storageOBJ);
+      chrome.storage.local.set(storageOBJ, function () {
+        enableDisableContextMenu(tabId);
+      });
     });
   } else {
     storageOBJ[tabId.toString()] = "";
-    chrome.storage.local.set(storageOBJ, function () {});
+    chrome.storage.local.set(storageOBJ, function () {
+      enableDisableContextMenu(tabId);
+    });
   }
+}
+
+function enableDisableContextMenu(tabId) {
+  chrome.storage.local.get(tabId.toString(), (storageItems) => {
+    let savedUrl = storageItems[tabId.toString()];
+    if (!savedUrl || savedUrl === "") {
+      chrome.contextMenus.update("parent-tab", { enabled: false });
+    } else {
+      chrome.contextMenus.update("parent-tab", { enabled: true });
+    }
+  });
 }
 
 // listener for clicks on context menu item
@@ -72,19 +87,11 @@ chrome.tabs.onRemoved.addListener((tabId) => {
 // enable/disable the context menu item as applicable
 chrome.tabs.onActivated.addListener((activeInfo) => {
   let tabId = activeInfo.tabId;
-  chrome.storage.local.get(tabId.toString(), (storageItems) => {
-    let savedUrl = storageItems[tabId.toString()];
-    if (!savedUrl || savedUrl === "") {
-      chrome.contextMenus.update("parent-tab", { enabled: false });
-    } else {
-      chrome.contextMenus.update("parent-tab", { enabled: true });
-    }
-  });
+  enableDisableContextMenu(tabId);
 });
 
 // Keyboard shortcut listner
 chrome.commands.onCommand.addListener(function (command) {
-  console.log(command);
   if (command === "go-to-parent-tab") {
     goToParent();
   }
